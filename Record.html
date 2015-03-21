@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+<TITLE>Academic Record Sheet(21.0)</TITLE>
+<meta http-equiv="content-type" contents="text/html;charset="iso-8859-9">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1254">
+</HEAD>
+
+<BODY BACKGROUND="http://www2.yildiz.edu.tr/images/back1.GIF">
+<FORM METHOD="post" ACTION="http://www2.yildiz.edu.tr/cgi-bin/academic_record_sheet.cgi" >
+<TABLE WIDTH="100%" HEIGHT="0%" BORDER="0" ALIGN="Center">
+<TR>
+        <TD><CENTER><A HREF="http://www.yildiz.edu.tr">
+<FONT SIZE="6">YILDIZ TEKNİK ÜNİVERSİTESİ </FONT></A></CENTER>
+<CENTER><FONT SIZE="5">ÖĞRENCİ İŞLERİ OTOMASYON SİSTEMİ </FONT></A></CENTER></TD>
+</TR>
+<TR>
+<TD><CENTER><br><FONT SIZE="5" COLOR="#3366FF"><B>Karne(21.0)</B></FONT></CENTER></TD> 
+</TR> 
+</TABLE>
+<HR>
+	<TABLE ALIGN="Center">
+	<TR>
+		<TD><B>Adı: </B>##Sa_Last_Name## ##Sa_First_Name##</TD>
+		<TD><TD><TD><TD><TD><TD><TD><TD>
+                <TD><B>Fakülte/Bölüm:</B>##Sa_Faculty_Name##/##Sa_Dept_Name##</TD>
+        </TR>
+	<TR>
+		<TD><B>Öğrenci No:</B>##Sa_Id_Number##</TD>
+		<TD><TD><TD><TD><TD><TD><TD><TD>
+		<TD><B>Sınıf/Dönem No:</B>##Sa_Class##/##Sa_Semester_No##</TD>
+		<TD><B>Dönem: </B> ##Sa_Semester##</TD>
+	</TR>
+	</TABLE>
+<HR>
+##Sa_IF=Enrolled##
+<TABLE ALIGN="Center">
+	<TR>
+		<TD><B>DERSLER </B></TD>
+		<TD><B>NOT</B></TD>
+		<TD><B>KREDİ</B></TD>
+		<TD><B>NOT TOPLAMI</B></TD>
+	<TR>
+	##Sa_BeginLoop##
+	<TR>
+		<TD>##Sa_DeptS## ##Sa_Course_Code##  ##Sa_Course_Name##</TD>
+		<TD ALIGN="Center">##Sa_Grade##</TD>
+		<TD ALIGN="Center">##Sa_Credit##</TD>
+		<TD ALIGN="Center">##Sa_Grade_Points##</TD>
+	<TR>
+	##Sa_EndLoop##
+	</TR>
+</TABLE>
+##Sa_ENDIF=Enrolled##
+##Sa_NOT=Enrolled##
+	<CENTER><FONT SIZE="4"><B>##Sa_Last_Name## ##Sa_First_Name## not enrolled to any course!</B></FONT></CENTER>
+##Sa_ENDIF=Enrolled##
+<HR>
+<TABLE ALIGN="Center">
+	<!--<TR>-->
+		<!--<TD><B>DÖNEM ORT.    :</B>##Sa_Gpa##</TD>-->
+		<!--<TD><B>TOPLAM </B><TD><TD>##Sa_New_Credit##<TD><TD><TD><TD><TD><TD>##Sa_New_Grade_Points##</TD>-->
+	<!--</TR>-->
+	<TR>
+		<TD><B>A.GEN.ORT.:</B>##Sa_Cum_Gpa##</TD>
+		<!--<TD><B>ÖNCEKİ TOPLAM</B><TD><TD>##Sa_Prev_Credit##<TD><TD><TD><TD><TD><TD>##Sa_Prev_Grade_Points##</TD>-->
+	</TR>
+	<!--<TR>-->
+		<!--<TD></TD>-->
+		<!--<TD><B>YIĞIŞIMLI TOPLAM</B><TD><TD>##Sa_Grand_Total_Credit##<TD><TD><TD><TD><TD><TD>##Sa_Grand_Total_Grade_Points##</TD>-->
+	<!--</TR>-->
+	<TR>
+		<TD><B>DURUMU:</B>##Sa_Standing##</TD> 
+	</TR>
+</TABLE> 
+<HR>
+<TABLE ALIGN="Center">
+	<TR>
+		<TD><B>Yeni Dönem: </B> 
+		<SELECT NAME="semester_new">
+		##Sa_BeginLoop##
+		<OPTION VALUE="##Sa_Semester_New##">##Sa_Semester_New##
+		##Sa_EndLoop##
+		</SELECT></TD>
+		<TD><INPUT TYPE="Submit" NAME="SubmitName" VALUE="Tamam"></TD>
+		<!--<TD><INPUT TYPE="Submit" NAME="SubmitName" VALUE="Submit"></TD>-->
+		<TD><INPUT TYPE="submit" NAME="SubmitName" VALUE="Geri Dön"></TD> 
+		<!--<TD><INPUT TYPE="submit" NAME="SubmitName" VALUE="Back"></TD>-->
+	</TR>
+</TABLE>
+<TABLE ALIGN="Center">
+	<TR>
+                <TD><FONT SIZE=3 COLOR=Red><U><B>Not: </U></B></TD>
+        </TR>
+        <TR>
+                <TD><LI>Kayıtları görmek istediğiniz yeni dönemi seçiniz</LI></TD>
+        </TR>
+	<TR>
+        	<TD ALIGN="Center"><BR><BR>e-mail :<A HREF="mailto:oiop@yildiz.edu.tr"><FONT SIZE=2 COLOR="#CC3300"><B>oiop@yildiz.edu.tr</B></FONT></A></TD>
+	</TR>
+	 <TR>
+                <TD ALIGN="CENTER"><FONT FACE="Arial,Helvetica" SIZE="-1"><B>Copyright @ 1998 METU COMPUTER CENTER</B></FONT><BR><BR>
+</TD>
+        </TR>
+	</TABLE>
+<INPUT TYPE="hidden" NAME="program_code" VALUE="##Sa_Program_Code##"> 
+<INPUT TYPE="hidden" NAME="program_type" VALUE="##Sa_Program_Type##"> 
+<INPUT TYPE="hidden" NAME="type_counter" VALUE="##Sa_Type_Counter##"> 
+<INPUT TYPE="hidden" NAME="semester_old" VALUE="##Sa_Semester_Old##"> 
+<INPUT TYPE="hidden" NAME="user" VALUE="##Sa_User##"> 
+<INPUT TYPE="hidden" NAME="id_number" VALUE="##Sa_Id_Number##"> 
+<INPUT TYPE="hidden" NAME="personel_id" VALUE="##Sa_Personel_Id##"> 
+<INPUT TYPE="hidden" NAME="SaFormName" VALUE="action_Record__FRecord_html"> </FORM>
+</BODY>
+</HTML>

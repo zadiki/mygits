@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<TITLE>Academic Record Sheet(21.0)</TITLE>
+<meta http-equiv="content-type" contents="text/html;charset="iso-8859-9">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1254">
+</HEAD>
+
+<BODY BACKGROUND="http://www2.yildiz.edu.tr/images/back1.GIF">
+<FORM METHOD="post" ACTION="http://www2.yildiz.edu.tr/cgi-bin/academic_record_sheet.cgi" >
+<TR>
+        <TD><CENTER><A HREF="http://www.yildiz.edu.tr">
+<FONT SIZE="6">YILDIZ TEKNİK ÜNİVERSİTESİ </FONT></A></CENTER>
+<CENTER><FONT SIZE="5">ÖĞRENCİ İŞLERİ OTOMASYON SİSTEMİ </FONT></A></CENTER></TD>
+</TR>
+<TR>
+<TD><CENTER><br><FONT SIZE="5" COLOR="#3366FF"><B>Karne(21.0)</B></FONT></CENTER></TD> 
+</TR>
+</TABLE>
+<HR>
+<TABLE ALIGN="Center">
+	<TR>
+	 	<TD>Program Tipi: </TD>
+                <TD><SELECT NAME="input_program_type">
+		##Sa_BeginLoop##
+		<OPTION VALUE="##Sa_Program_Type_Code##">##Sa_Program_Type## 
+		##Sa_EndLoop##
+		</SELECT>
+		</TD>
+	</TR>
+	<TR>
+		 <TD ALIGN="Center"><INPUT TYPE="submit" NAME="SubmitName" VALUE="Tamam"></TD> 
+		<!--<TD ALIGN="Center"><INPUT TYPE="submit" NAME="SubmitName" VALUE="Submit"></TD>-->
+                <TD ALIGN="Center"><INPUT TYPE="Submit" NAME="SubmitName" VALUE="Geri Dön"></TD>
+                <!--<TD ALIGN="Center"><INPUT TYPE="Submit" NAME="SubmitName" VALUE="Back"></TD>-->
+	</TR>
+</TABLE>
+<HR>
+	<TABLE ALIGN="Center">
+	<TR> 
+		<TD><FONT SIZE=3 COLOR=Red><U><B>Not: </U></B></TD>
+	</TR>
+	<TR>
+        	<TD><LI>Program Tipini seçip TAMAM butonuna basınız!</LI></TD>
+	</TR>
+	<TR>
+        	<TD ALIGN="Center"><BR>e-mail :<A HREF="mailto:oiop@yildiz.edu.tr"><FONT SIZE=2 COLOR="#CC3300"><B>oiop@yildiz.edu.tr</B></FONT></A></TD>
+	</TR>
+        <TR>
+                <TD ALIGN="Center"><FONT FACE="Arial,Helvetica" SIZE="-1"><B>Copyright @ 1998 METU COMPUTER CENTER</B></FONT></TD>
+        </TR>
+	</TABLE>
+<INPUT TYPE="Hidden" NAME="user" VALUE="##Sa_User##">
+<INPUT TYPE="Hidden" NAME="program_code" VALUE="##Sa_Program_Code##">
+<INPUT TYPE="Hidden" NAME="semester" VALUE="##Sa_Semester##">
+<INPUT TYPE="Hidden" NAME="id_number" VALUE="##Sa_Id_Number##">
+<INPUT TYPE="hidden" NAME="SaFormName" VALUE="action_program_type__FProgram_Type_html"> </FORM>
+
+</BODY>
+</HTML>
